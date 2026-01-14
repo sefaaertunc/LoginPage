@@ -5,25 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.example.loginpage.databinding.FragmentLoginBinding
+import com.example.loginpage.databinding.FragmentUserBinding
 
 
-class Login : Fragment() {
+class User : Fragment() {
 
-    private var _binding: FragmentLoginBinding? = null
+    private var _binding: FragmentUserBinding? = null
     private val binding get() = _binding!!
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        _binding = FragmentUserBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -31,29 +29,12 @@ class Login : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.login.setOnClickListener {
-            login(it)
-        }
-
-        binding.register.setOnClickListener {
-            register(it)
-        }
-    }
-
-    fun login(view: View){
-        val mail = binding.editTextTextEmailAddress.text.toString()
-        findNavController().navigate(R.id.action_login_to_user)
 
     }
-    fun register(view: View){
-        findNavController().navigate(R.id.action_login_to_register)
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 
 
 }

@@ -13,10 +13,32 @@
         <action
             android:id="@+id/action_login_to_register"
             app:destination="@id/register" />
+        <action
+            android:id="@+id/action_login_to_user"
+            app:destination="@id/user" />
     </fragment>
     <fragment
         android:id="@+id/register"
         android:name="com.example.loginpage.Register"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_login2"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/user"
+        android:name="com.example.loginpage.User"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <argument
+            android:name="mail"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="integer" />
+        <argument
+            android:name="phone"
+            app:argType="integer" />
+    </fragment>
 </navigation>

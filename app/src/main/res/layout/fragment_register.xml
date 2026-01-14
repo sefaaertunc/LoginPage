@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentRegister"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Register">
@@ -17,38 +18,39 @@
             android:id="@+id/editTextTextEmailAddress2"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:layout_marginStart="80dp"
+            android:layout_marginTop="50dp"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:hint="E-Mail Giriniz"/>
+            android:hint="E-Mail Giriniz"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/editTextPhone"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:layout_marginStart="80dp"
+            android:layout_marginTop="50dp"
             android:ems="10"
-            android:inputType="phone"
-            android:hint="Numara Giriniz"/>
+            android:hint="Numara Giriniz"
+            android:inputType="phone" />
 
         <EditText
             android:id="@+id/editTextTextPassword2"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:layout_marginStart="80dp"
+            android:layout_marginTop="50dp"
             android:ems="10"
-            android:inputType="textPassword"
-            android:hint="Şifre Giriniz"/>
+            android:hint="Şifre Giriniz"
+            android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/register2"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_marginTop="50dp"
             android:layout_marginStart="150dp"
+            android:layout_marginTop="50dp"
+            android:onClick="register2"
             android:text="Kayıt Ol" />
     </LinearLayout>
 </FrameLayout>

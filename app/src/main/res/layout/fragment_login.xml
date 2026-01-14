@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login">
@@ -15,37 +16,39 @@
             android:id="@+id/editTextTextEmailAddress"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:layout_marginStart="80dp"
+            android:layout_marginTop="50dp"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:hint="E-Mail Giriniz"/>
+            android:hint="E-Mail Giriniz"
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:layout_marginStart="80dp"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:hint="Şifrenizi Giriniz"/>
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
             android:layout_marginTop="50dp"
-            android:layout_marginStart="150dp"
-            android:text="Giriş Yap"
-            android:textAlignment="center"/>
+            android:ems="10"
+            android:hint="Şifrenizi Giriniz"
+            android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/login"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:layout_marginTop="25dp"
             android:layout_marginStart="150dp"
+            android:layout_marginTop="50dp"
+            android:text="Giriş Yap"
+            android:onClick="login"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="25dp"
+            android:onClick="register"
             android:text="Kayıt Ol" />
 
     </LinearLayout>
